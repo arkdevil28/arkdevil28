@@ -1,0 +1,3 @@
+
+
+<!DOCTYPE html> <html> <head> <title>Coding App</title> <style> #output { height: 300px; overflow-y: scroll; border: 1px solid black; margin-top: 10px; } </style> </head> <body> <h1>Coding App</h1> <textarea id="code" style="width: 100%; height: 200px;"></textarea> <button id="run">Run Code</button> <div id="output"></div> <script> document.getElementById('run').addEventListener('click', function() { var code = document.getElementById('code').value; try { eval(code); } catch (e) { document.getElementById('output').textContent = e.message; } }); </script> </body> </html>
